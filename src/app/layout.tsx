@@ -12,8 +12,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-      className="bg-center bg-cover"
-style={{backgroundImage: 'url("/bg.jpg")'}}
+      className="bg-cover bg-center bg-[url('/bvb4.jpg')]"
       >
         <ThemeProvider
           attribute="class"
@@ -21,7 +20,7 @@ style={{backgroundImage: 'url("/bg.jpg")'}}
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col gap-y-4 m-4 bg-center bg-cover" style={{backgroundImage: 'url("/bg.jpg")'}}>
+          <div className="flex flex-col gap-y-4 m-4">
             <Navbar />
             {children}
           </div>

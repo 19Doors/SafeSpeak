@@ -52,10 +52,9 @@ function Navbar() {
   const { setTheme } = useTheme();
   const [isDark, setIsDark] = useState(false);
   return (
-    <div className="w-full flex justify-between pb-1">
-    <div></div>
-      <NavigationMenu>
-        <NavigationMenuList>
+    <div className="w-full flex justify-between pb-1 rounded rounded-md">
+      <NavigationMenu className="">
+        <NavigationMenuList className="">
           {navigationItems.map((item: NavItem, id: number): any => {
             return (
               <NavigationMenuItem key={id} className="">
@@ -96,12 +95,12 @@ let featureList: features[] = [
   },
 ];
   return (
-    <div className="flex gap-x-8 justify-center items-center h-[80vh] mx-8">
+    <div className="flex gap-x-8 justify-center items-center h-[79vh] mx-8">
       {featureList.map((feature: features, id: number) => {
         return (
-          <div className="flex flex-col p-4 border border-black shadow rounded min-h-[35vh] w-1/3 max-w-[20rem] gap-y-4 bg-[#DDDFEA]" key={id}>
-            <p className="font-bold font-spaceG text-lg">{feature.heading}</p>
-            <p className="font-inter text-sm">{feature.feature}</p>
+          <div className="flex flex-col p-4 border border-black shadow rounded min-h-[45vh] w-1/3 max-w-[20rem] gap-y-4 bg-[#FFECDB]" key={id}>
+            <p className="font-bold text-2xl">{feature.heading}</p>
+            <p className="font-nsd">{feature.feature}</p>
           </div>
         );
       })}
